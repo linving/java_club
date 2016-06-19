@@ -1,5 +1,6 @@
 package club.main;
 
+import club.bll.AdminBLL;
 import club.bll.UserBLL;
 
 /**
@@ -11,8 +12,12 @@ import club.bll.UserBLL;
 public class Main {
 
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
+
         UserBLL userBLL = new UserBLL();
         userBLL.getUser();
+
+        AdminBLL adminBLL = new AdminBLL();
+        adminBLL.getAdmin();
     }
 }
