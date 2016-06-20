@@ -1,6 +1,7 @@
 package club.bll;
 
 import club.annotation.DAL;
+import club.annotation.ScopeType;
 import club.dal.AdminDAL;
 import club.dal.UserDAL;
 
@@ -12,10 +13,10 @@ import club.dal.UserDAL;
  */
 public class UserBLL extends BaseBLL {
 
-    @DAL(UserDAL.class)
+    @DAL(value = UserDAL.class, scope = ScopeType.Singleton)
     private UserDAL userDAL;
 
-    @DAL(AdminDAL.class)
+    @DAL(value = AdminDAL.class, scope = ScopeType.Singleton)
     private AdminDAL adminDAL;
 
     public UserBLL() {
