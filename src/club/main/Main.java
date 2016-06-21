@@ -16,7 +16,6 @@ public class Main {
 
         UserBLL userBLL = new UserBLL();
         userBLL.getUser();
-
         AdminBLL adminBLL = new AdminBLL();
         adminBLL.getAdmin();
     }

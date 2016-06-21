@@ -44,7 +44,8 @@ public class BookFacadeCglib implements MethodInterceptor {
         AOP aop = method.getDeclaredAnnotation(AOP.class);
         System.out.println("AOP : " + aop.annotationType().getName());
         Object object = proxy.invokeSuper(obj, args);
-        System.out.println("事物结束");
+
+        System.out.println("事物结束" );
         return object;
     }
 }
