@@ -12,7 +12,7 @@ import java.util.WeakHashMap;
  */
 public class ObjectCreator {
     //  缓存对象的 map
-    public static Map<Class, Object> beanMap = new WeakHashMap<>();
+    public static Map<Class, XObject> beanMap = new WeakHashMap<>();
 
     /**
      * 创建对象
@@ -22,10 +22,10 @@ public class ObjectCreator {
      * @param clazz
      * @return
      */
-    public static Object createObject(Class clazz) throws IllegalAccessException, InstantiationException {
-        Object object = beanMap.get(clazz);
+    public static XObject createObject(Class clazz) throws IllegalAccessException, InstantiationException {
+        XObject object = beanMap.get(clazz);
         if (null == object) {
-            object = clazz.newInstance();
+            object = (XObject) clazz.newInstance();
             beanMap.put(clazz, object);
         }
         return object;
