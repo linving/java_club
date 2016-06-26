@@ -1,4 +1,4 @@
-package club.jdk.proxy;
+package test.proxy;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Proxy;

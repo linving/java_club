@@ -1,5 +1,6 @@
-package club.jdk.proxy;
+package test.proxy;
 
+import club.Interceptor.TimeInterceptor;
 import club.annotation.AOP;
 
 /**
@@ -15,7 +16,7 @@ public class RealSubject  implements Subject {
     }
 
     @Override
-    @AOP(value = RealSubject.class)
+    @AOP(value = TimeInterceptor.class)
     public void hello(String str) {
         System.out.println("hello: " + str);
     }

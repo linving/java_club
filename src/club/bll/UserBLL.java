@@ -1,5 +1,7 @@
 package club.bll;
 
+import club.Interceptor.TimeInterceptor;
+import club.annotation.AOP;
 import club.annotation.DAL;
 import club.annotation.ScopeType;
 import club.dal.AdminDAL;
@@ -23,6 +25,7 @@ public class UserBLL extends BaseBLL {
         super();
     }
 
+   // @AOP(value = TimeInterceptor.class)
     public void getUser() {
         userDAL.getUser();
         adminDAL.getAdmin();

@@ -1,5 +1,6 @@
-package club.cglib.proxy;
+package test.proxy.proxy;
 
+import club.Interceptor.LogInterceptor;
 import club.annotation.AOP;
 import club.bll.UserBLL;
 
@@ -10,7 +11,7 @@ import club.bll.UserBLL;
  * Time : 11:49
  */
 public class BookFacade {
-    @AOP(UserBLL.class)
+    @AOP(LogInterceptor.class)
     public void addBook() {
         System.out.println("增加图书的普通方法...");
     }

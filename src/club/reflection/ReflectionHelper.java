@@ -4,6 +4,7 @@ import club.annotation.DAL;
 import club.annotation.ScopeType;
 
 import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 
 /**
  * Created by 1dian_tech50 on 2016/6/19.
@@ -36,6 +37,8 @@ public class ReflectionHelper {
                 Class cla = annDAL.value();
                 //获取实例
                 XObject instance = ObjectCreator.createObject(cla);
+                ProxyCreator proxyCreator = new ProxyCreator();
+                instance = (XObject) proxyCreator.getProxyObject(instance);
                 ScopeType scopeType = annDAL.scope();
                 //根据 Scope 赋值
                 if (scopeType.equals(ScopeType.Prototype)) {
@@ -46,5 +49,11 @@ public class ReflectionHelper {
 
             }
         }
+
     }
+
+    public static void doMethodInterceptor(Object object, Class clazz) {
+
+    }
+
 }

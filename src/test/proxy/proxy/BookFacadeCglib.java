@@ -1,4 +1,4 @@
-package club.cglib.proxy;
+package test.proxy.proxy;
 
 
 
@@ -8,7 +8,6 @@ import net.sf.cglib.proxy.Enhancer;
 import net.sf.cglib.proxy.MethodInterceptor;
 import net.sf.cglib.proxy.MethodProxy;
 
-import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;
 
 /**
@@ -44,7 +43,6 @@ public class BookFacadeCglib implements MethodInterceptor {
         AOP aop = method.getDeclaredAnnotation(AOP.class);
         System.out.println("AOP : " + aop.annotationType().getName());
         Object object = proxy.invokeSuper(obj, args);
-
         System.out.println("事物结束" );
         return object;
     }

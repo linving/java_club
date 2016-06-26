@@ -1,5 +1,7 @@
 package club.bll;
 
+import club.Interceptor.LogInterceptor;
+import club.annotation.AOP;
 import club.annotation.DAL;
 import club.annotation.ScopeType;
 import club.dal.AdminDAL;
@@ -14,7 +16,7 @@ import club.dal.UserDAL;
 public class AdminBLL extends BaseBLL {
     @DAL(value = UserDAL.class, scope = ScopeType.Singleton)
     private UserDAL userDAL;
-    @DAL(value = AdminDAL.class ,scope = ScopeType.Singleton)
+    @DAL(value = AdminDAL.class, scope = ScopeType.Singleton)
     private AdminDAL adminDAL;
 
     public AdminBLL() {
@@ -25,6 +27,4 @@ public class AdminBLL extends BaseBLL {
         adminDAL.getAdmin();
         System.out.println(" AdminBLL 里面 Admin 的 HashCode = " + adminDAL.hashCode());
     }
-
-
 }

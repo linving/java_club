@@ -1,6 +1,4 @@
-package club.jdk.proxy;
-
-import club.annotation.AOP;
+package test.proxy;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;

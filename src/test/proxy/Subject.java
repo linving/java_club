@@ -1,4 +1,4 @@
-package club.jdk.proxy;
+package test.proxy;
 
 /**
  * Created by 1dian_tech50 on 2016/6/21.

@@ -1,4 +1,4 @@
-package club.cglib.proxy;
+package test.proxy.proxy;
 
 /**
  * Created by 1dian_tech50 on 2016/6/21.

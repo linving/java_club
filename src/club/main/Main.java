@@ -2,6 +2,8 @@ package club.main;
 
 import club.bll.AdminBLL;
 import club.bll.UserBLL;
+import club.reflection.ProxyCreator;
+import club.reflection.ReflectionHelper;
 
 /**
  * Created by 1dian_tech50 on 2016/6/19.
@@ -12,11 +14,10 @@ import club.bll.UserBLL;
 public class Main {
 
 
-    public static void main(String[] args) {
-
-        UserBLL userBLL = new UserBLL();
-        userBLL.getUser();
+    public static void main(String[] args) throws IllegalAccessException, CloneNotSupportedException, InstantiationException {
         AdminBLL adminBLL = new AdminBLL();
         adminBLL.getAdmin();
+        UserBLL userBLL = new UserBLL();
+        userBLL.getUser();
     }
 }
